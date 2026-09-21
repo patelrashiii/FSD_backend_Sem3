@@ -79,7 +79,7 @@ const server = http.createServer((req, res) => {
 
         let body = "";
 
-        // Receive incoming data
+        // Receive Incoming Data
         req.on("data", (chunk) => {
             body += chunk.toString();
         });
