@@ -109,7 +109,7 @@ const server = http.createServer((req, res) => {
                     }
                 }
 
-                // Add new student
+                // Add New Student
                 students.push(newStudent);
 
                 // Save updated data
