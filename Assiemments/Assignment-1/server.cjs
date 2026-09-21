@@ -6,7 +6,7 @@ const PORT = 3000;
 
 const server = http.createServer((req, res) => {
 
-    // Home page - display student form
+    // Home Page - display student form
     if (req.method === "GET" && req.url === "/") {
 
         const html = `
