@@ -236,7 +236,7 @@ const server = http.createServer((req, res) => {
         });
     }
 
-    // Route not found
+    // Route Not Found
     else {
 
         res.writeHead(404, {
