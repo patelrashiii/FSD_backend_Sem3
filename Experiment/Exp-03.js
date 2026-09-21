@@ -1,4 +1,4 @@
-//Create a basic HTTP server using http.createserver(), Respond with "Hello World" 
+//Create a basic HTTP server using http.createserver(), Respond with "Hello world" 
 //and return headers + status code 200
 
 import http from"http";
