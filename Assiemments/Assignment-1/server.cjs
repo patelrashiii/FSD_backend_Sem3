@@ -96,7 +96,7 @@ const server = http.createServer((req, res) => {
                 email: data.email
             };
 
-            // Read existing students
+            // Read Existing Students
             fs.readFile("students.json", "utf8", (err, fileData) => {
 
                 let students = [];
