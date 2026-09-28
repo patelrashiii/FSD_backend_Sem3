@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Help Desk</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: 20px auto; padding: 0 20px; }
+    form { display: flex; flex-direction: column; gap: 10px; margin-bottom: 30px; background: #f9f9f9; padding: 15px; border-radius: 5px; }
+    input, select, textarea, button { padding: 8px; font-size: 14px; }
+    .card { border: 1px solid #ccc; padding: 15px; margin-bottom: 10px; border-radius: 5px; }
+    .btn-group { margin-top: 10px; display: flex; gap: 10px; }
+  </style>
+</head>
+<body>
+
+  <h2>Campus Help Desk</h2>
+  
+  <form id="requestForm">
+    <input type="hidden" id="requestId">
+    <input type="text" id="studentName" placeholder="Student Name" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <select id="category" required>
+      <option value="">Select Category</option>
+      <option value="IT Support">IT Support</option>
+      <option value="Hostel">Hostel</option>
+      <option value="Academics">Academics</option>
+      <option value="Maintenance">Maintenance</option>
+    </select>
+    <textarea id="description" placeholder="Problem Description" rows="3" required></textarea>
+    <select id="priority" required>
+      <option value="">Select Priority</option>
+      <option value="Low">Low</option>
+      <option value="Medium">Medium</option>
+      <option value="High">High</option>
+    </select>
+    <button type="submit" id="submitBtn">Submit Request</button>
+  </form>
+
+  <h3>Submitted Requests</h3>
+  <div id="requestsList"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
