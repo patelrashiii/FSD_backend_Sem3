@@ -6,7 +6,7 @@ const PORT = 3000;
 
 const server = http.createServer((req, res) => {
 
-    // Home page - display student form
+    // Home Page - display student form
     if (req.method === "GET" && req.url === "/") {
 
         const html = `
@@ -79,7 +79,7 @@ const server = http.createServer((req, res) => {
 
         let body = "";
 
-        // Receive incoming data
+        // Receive Incoming Data
         req.on("data", (chunk) => {
             body += chunk.toString();
         });
@@ -96,7 +96,7 @@ const server = http.createServer((req, res) => {
                 email: data.email
             };
 
-            // Read existing students
+            // Read Existing Students
             fs.readFile("students.json", "utf8", (err, fileData) => {
 
                 let students = [];
@@ -109,7 +109,7 @@ const server = http.createServer((req, res) => {
                     }
                 }
 
-                // Add new student
+                // Add New Student
                 students.push(newStudent);
 
                 // Save updated data
@@ -236,7 +236,7 @@ const server = http.createServer((req, res) => {
         });
     }
 
-    // Route not found
+    // Route Not Found
     else {
 
         res.writeHead(404, {
